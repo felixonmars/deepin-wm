@@ -132,6 +132,12 @@ namespace Gala
             (wm as WindowManagerGala).set_transient_background (uri);
         }
 
+        public int get_current_workspace()
+        {
+            var gala = (wm as WindowManagerGala);
+            return gala.get_screen().get_active_workspace_index();
+        }
+
         public string get_current_workspace_background ()
         {
             return (wm as WindowManagerGala).get_current_workspace_background ();
